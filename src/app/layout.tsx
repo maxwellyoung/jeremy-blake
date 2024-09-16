@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js App",
-  description: "Created with Next.js",
+  title: "Jeremy Blake Net Art",
+  description: "An interactive homage to Jeremy Blake's digital art",
 };
 
 export default function RootLayout({
@@ -16,7 +16,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="">{children}</main>
+        <footer className="fixed bottom-0 right-0 p-2 text-xs text-gray-500">
+          <a
+            href="https://dev.maxwellyoung.info"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            dev.maxwellyoung.info
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }
